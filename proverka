@@ -1,0 +1,11 @@
+import random
+
+# Задаем диапазон случайного числа
+min_number = 1
+max_number = 100
+
+# Генерируем случайное число
+random_number = random.randint(min_number, max_number)
+
+# Выводим случайное число на экран
+print(f"Случайное число в диапазоне от {min_number} до {max_number}: {random_number}")
