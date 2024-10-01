@@ -1,0 +1,123 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPCwTi5tY++/t2uk/oAOoYb",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/MasterSkySki/StartProject/blob/main/%D0%97%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%202\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "HFOwMEwyaK5m",
+        "outputId": "3e642e04-0006-4f8f-d434-9ebe08d80eb4"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "es\n",
+            "t\n"
+          ]
+        }
+      ],
+      "source": [
+        "def find_middle(word):\n",
+        "    length = len(word)\n",
+        "\n",
+        "    # Если длина слова четная\n",
+        "    if length % 2 == 0:\n",
+        "        middle1 = length // 2 - 1\n",
+        "        middle2 = length // 2\n",
+        "        print(word[middle1] + word[middle2])\n",
+        "    # Если длина слова нечетная\n",
+        "    else:\n",
+        "        middle = length // 2\n",
+        "        print(word[middle])\n",
+        "\n",
+        "# Примеры использования\n",
+        "word1 = 'test'\n",
+        "find_middle(word1)  # Результат: es\n",
+        "\n",
+        "word2 = 'testing'\n",
+        "find_middle(word2)  # Результат: t"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def create_pairs(boys, girls):\n",
+        "    if len(boys) != len(girls):\n",
+        "        print(\"Внимание, кто-то может остаться без пары!\")\n",
+        "        return\n",
+        "\n",
+        "    # Сортируем списки\n",
+        "    boys_sorted = sorted(boys)\n",
+        "    girls_sorted = sorted(girls)\n",
+        "\n",
+        "    # Выводим пары\n",
+        "    print(\"Идеальные пары:\")\n",
+        "    for boy, girl in zip(boys_sorted, girls_sorted):\n",
+        "        print(f\"{boy} и {girl}\")\n",
+        "\n",
+        "# Пример 1\n",
+        "boys1 = ['Peter', 'Alex', 'John', 'Arthur', 'Richard']\n",
+        "girls1 = ['Kate', 'Liza', 'Kira', 'Emma', 'Trisha']\n",
+        "create_pairs(boys1, girls1)\n",
+        "\n",
+        "# Пример 2\n",
+        "boys2 = ['Peter', 'Alex', 'John', 'Arthur', 'Richard', 'Michael']\n",
+        "girls2 = ['Kate', 'Liza', 'Kira', 'Emma', 'Trisha']\n",
+        "create_pairs(boys2, girls2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "bo_YWu-paWqd",
+        "outputId": "08e9ec33-838c-49dd-f537-7b1916ff1589"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Идеальные пары:\n",
+            "Alex и Emma\n",
+            "Arthur и Kate\n",
+            "John и Kira\n",
+            "Peter и Liza\n",
+            "Richard и Trisha\n",
+            "Внимание, кто-то может остаться без пары!\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
